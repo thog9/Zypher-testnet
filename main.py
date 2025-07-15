@@ -47,9 +47,9 @@ def _clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 # Các hàm giả lập cho các lệnh mới
-async def run_checkin(language: str):
-    from scripts.checkin import run_checkin as checkin_run
-    await checkin_run(language)
+async def run_mintnft(language: str):
+    from scripts.mintnft import run_mintnft as mintnft_run
+    await mintnft_run(language)
 
 
 async def cmd_exit(language: str):
@@ -59,7 +59,7 @@ async def cmd_exit(language: str):
 
 # Danh sách lệnh menu
 SCRIPT_MAP = {
-    "checkin": run_checkin,
+    "mintnft": run_mintnft,
     "exit": cmd_exit
 }
 
